@@ -22,6 +22,7 @@ const App = () => {
         <Stack.Screen name="GameDashboard" component={GameDashboardScreen} />
       </Stack.Navigator>
       <Toast ref={(ref) => Toast.setRef(ref)} />
+        
     </NavigationContainer>
   );
 };
