@@ -4,7 +4,7 @@ import { View, TextInput, Button, StyleSheet, Text,TouchableOpacity, Image } fro
 import {auth} from '../firebase'
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import Toast from 'react-native-toast-message';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+// import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const SignUpScreen = ({ navigation }) => {
   const [email, setEmail] = useState('');
@@ -13,7 +13,7 @@ const SignUpScreen = ({ navigation }) => {
   const handleSignUp = async () => {
     try {
    const data=   await createUserWithEmailAndPassword(auth,email, password);
-      await AsyncStorage.setItem('userToken', email);  // Store user token locally
+      // await AsyncStorage.setItem('userToken', email); 
      
     Toast.show({
       type: 'success',

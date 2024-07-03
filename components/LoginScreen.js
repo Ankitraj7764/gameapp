@@ -17,7 +17,7 @@ const LoginScreen = ({ navigation }) => {
 
     try {
       const data = await signInWithEmailAndPassword(auth, email, password);
-      console.log(data)
+      
       Toast.show({
         type: 'success',
         text1: 'Successfully logged in!',
